@@ -1,6 +1,4 @@
 <?php
-
-interface IRequest
-{
+interface IRequest {
     public function getBody();
 }
