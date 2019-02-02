@@ -97,15 +97,15 @@ class Fence
 Test for supplying length and returning the correct number of posts + railings.
 */
 
-$myFence = new Fence;
-$myFence->setLength(7);
-$length = $myFence->getLength();
-$posts = $myFence->calculatePosts($length);
-$railings = $myFence->calculateRailings($length);
+// $myFence = new Fence;
+// $myFence->setLength(7);
+// $length = $myFence->getLength();
+// $posts = $myFence->calculatePosts($length);
+// $railings = $myFence->calculateRailings($length);
 
-echo "A minimum fence length of {$length}m requires:\n";
-echo $posts, " posts\n";
-echo $railings, " railings\n";
+// echo "A minimum fence length of {$length}m requires:\n";
+// echo $posts, " posts\n";
+// echo $railings, " railings\n";
 
 
 /* 

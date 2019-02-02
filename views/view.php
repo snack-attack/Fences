@@ -13,22 +13,25 @@
     </head>
     <body>
         <header>
-            <h1>Fence Fancy!</h1>
-            <h3>Calculate how many materials you need to build a fence of a certain minimum length OR provide a quantity of materials and find out the maximum length fence you can build.</h3>
+            <h1 style="text-align:center">Fancy Fence!</h1>
+            <h4>Calculate how many materials you need to build a fence of a certain minimum length OR provide a quantity of materials and find out the maximum length fence you can build.</h4>
         </header>
-        <form action="index.php" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <h3 style="text-align:center">OPTION 1: How many posts and railings do you have?</h3>
-            Railings: <input type="number" name="railings" min="0"><br><br>
+        <form action="index.php" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"><br>
+            <h3>OPTION 1: How many posts and railings do you have?</h3>
             Posts: <input type="number" name="posts" min="0"><br><br>
-            <h3 style="text-align:center">OPTION 2: The minimum length of fence you require:</h3>
-            <input type="number" name="length" min="0"><br><br>
+            Railings: <input type="number" name="railings" min="0"><br><br>
+            <h3>OPTION 2: The minimum length of fence you require:</h3>
+            Length: <input type="number" name="length" min="0"><br><br>
             Units: 
-            <input type="radio" name="unit">Centimeters
-            <input type="radio" name="unit">Meters<br><br>
+            <!-- <input type="radio" name="unit">Centimeters -->
+            <!-- <input type="radio" name="unit">Meters<br><br> -->
             <button name="submit">Build me a fence!</button>
         </form>
+        <br>
+        <hr>
+        <br>
         <h2 style="text-align:center">Final Fence Specifications</h2>
-        <table style="width:75%">
+        <table style="width:75%; margin-bottom:8rem">
             <tr>
                 <th></th>
                 <th>Provided Specifications</th>
@@ -36,16 +39,23 @@
             </tr>
             <tr style="margin-bottom:20px">
                <th>Posts</th>
+               <th><?= isset($_POST["posts"]) ?></th>
                <th><?= $posts ?></th>
             </tr>
             <tr>
                <th>Railings</th>
+               <th><?= isset($_POST["railings"]) ?></th>
+               <th><?= $railings ?></th>
             </tr>
             <tr>
                <th>Length</th>
+               <th><?= isset($_POST["length"]) ?></th>
+               <th><?= $length ?></th>
             </tr>
             <tr>
                <th>Units</th>
+               <th>Meters</th>
+               <th>Meters</th>
             </tr>
         </table>
         
