@@ -12,84 +12,70 @@ TODO =>
 3. Write comments
 */
 
-class Fence 
-{
-//lengths given in centimeters
-const RAILING_LENGTH = 1.5;
-const POST_LENGTH = 0.1;
-const MIN_LENGTH = 1.7;
+class Fence {
+    //lengths given in centimeters
+    const RAILING_LENGTH = 1.5;
+    const POST_LENGTH = 0.1;
+    const MIN_LENGTH = 1.7;
 
-private $posts, $railings, $length;
+    private $posts, $railings, $length;
 
-public function setPosts($posts)
-{
-$this->posts = $posts;
-}
+    public function setPosts($posts) {
+        $this->posts = $posts;
+    }
 
-public function getPosts()
-{
-return $this->posts;
-}
+    public function getPosts() {
+        return $this->posts;
+    }
 
-public function setRailings($railings)
-{
-$this->railings = $railings;
-}
+    public function setRailings($railings) {
+        $this->railings = $railings;
+    }
 
-public function getRailings()
-{
-return $this->railings;
-}
+    public function getRailings() {
+        return $this->railings;
+    }
 
-public function setLength($length) 
-{
-$this->length = $length;
-}
+    public function setLength($length) {
+        $this->length = $length;
+    }
 
-public function getLength() 
-{
-return $this->length;
-}
+    public function getLength() {
+        return $this->length;
+    }
 
 
-//function to calculate fence length in meters given posts + railings
-public function caluclateLength(int $posts, int $railings) 
-{
-//validate the min posts (2) and railings (1) to build the shortest possible fence length
-if(isset($posts) && isset($railings))
-{
-$postLength = $posts * self::POST_LENGTH;
-$railLength = $railings * self::RAILING_LENGTH; 
-$length = $postLength + $railLength;
+    //function to calculate fence length in meters given posts + railings
+    public function caluclateLength(int $posts, int $railings) {
+        //validate the min posts (2) and railings (1) to build the shortest possible fence length
+        if(isset($posts) && isset($railings)) {
+            $postLength = $posts * self::POST_LENGTH;
+            $railLength = $railings * self::RAILING_LENGTH; 
+            $length = $postLength + $railLength;
 
-return $length;
+            return $length;
 
-}
+        }
 
-}
+    }
 
-public function calculatePosts($length) 
-{
-if(isset($length) && $length >= self::MIN_LENGTH) 
-{
-$posts = ceil(($length - self::POST_LENGTH) / 1.6 + 1);
-return $posts; 
-}
+    public function calculatePosts($length) {
+        if(isset($length) && $length >= self::MIN_LENGTH) {
+            $posts = ceil(($length - self::POST_LENGTH) / 1.6 + 1);
+            return $posts; 
+        }
 
-echo "Please supply a minimum fence length of 1.7m or greater.";
+        echo "Please supply a minimum fence length of 1.7m or greater.";
+    }
 
-}
+    public function calculateRailings($length) {
+        if(isset($length) && $length >= self::MIN_LENGTH) { 
+            $railings = ceil(($length - self::POST_LENGTH) / 1.6);
+            return $railings;
+        }
 
-public function calculateRailings($length)
-{
-if(isset($length) && $length >= self::MIN_LENGTH)
-{ 
-$railings = ceil(($length - self::POST_LENGTH) / 1.6);
-return $railings;
-}
-
-echo "Please supply a minimum fence length of 1.7m or greater.";
-}
+        echo "Please supply a minimum fence length of 1.7m or greater.";
+    }
 
 }
 

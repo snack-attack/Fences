@@ -20,5 +20,5 @@ $router = new Router(new Request);
 // });
 
 $router->post('/index.php', function($request) {
-return json_encode($request->getBody());
+    return '/views/fence.view.php';
 });

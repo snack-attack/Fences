@@ -46,6 +46,7 @@ class Router {
     /**
      * Resolves a route
      */
+    
     function resolve() {
         $methodDictionary = $this->{strtolower($this->request->requestMethod)};
         $formatedRoute = $this->formatRoute($this->request->requestUri);
