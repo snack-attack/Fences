@@ -20,5 +20,10 @@ $router = new Router(new Request);
 // });
 
 $router->post('/index.php', function($request) {
-    return '/views/fence.view.php';
+    $request = $request->getBody();
+    $fence = new Fence();
+    $length = $fence->setLength($request['length']);
+    //$length = $fence->setLength();
+    //$posts = $fence->setPosts($request['posts']);
+    var_dump($length);
 });

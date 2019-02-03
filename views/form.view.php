@@ -1,9 +1,3 @@
-<?php
-
-include_once "./index.view.php"; 
-
-?>
-
 <section>
     <form action="index.php" method="post"><br>
         <h3>OPTION 1: How many posts and railings do you have?</h3>
