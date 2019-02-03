@@ -1,9 +1,3 @@
-<?php
-
-include_once "./index.view.php"; 
-
-?>
-
 <h2 style="text-align:center">Final Fence Specifications</h2>
 <table style="width:75%; margin-bottom:8rem">
     <tr>

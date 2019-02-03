@@ -22,6 +22,8 @@
 
         <div><?php include_once 'form.view.php' ?></div>
 
+        <div><?php include_once 'fence.view.php' ?></div>
+
 
     </body>
 </html>

@@ -10,6 +10,16 @@ $router = new Router(new Request);
 $router->post('/index.php', function($request) {
     $request = $request->getBody();
     $fence = new Fence();
-    $length = $fence->setLength($request['length']);
+
+    $fence->setLength(+$request['length']);
+    $fence->setPosts(+$request['posts']);
+    $fence->setRailings(+$request['railings']);
+
+    $length = $fence->getLength();
+    $posts = $fence->getPosts();
+    $railings = $fence->getRailings();
+
+    var_dump($railings);
+    var_dump($posts);
     var_dump($length);
 });
