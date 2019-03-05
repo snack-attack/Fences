@@ -7,13 +7,13 @@ include_once './views/index.view.php';
 
 $router = new Router(new Request);
 
-$router->post('/', function($request) {
+$router->post('/index.php', function($request) {
     $request = $request->getBody();
     $fence = new Fence();
 
-    $fence->setLength(+$request['length']);
-    $fence->setPosts(+$request['posts']);
-    $fence->setRailings(+$request['railings']);
+    $fence->setLength($request['length']);
+    $fence->setPosts($request['posts']);
+    $fence->setRailings($request['railings']);
 
     $length = $fence->getLength();
     $posts = $fence->getPosts();
