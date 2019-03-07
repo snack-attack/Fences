@@ -25,15 +25,8 @@
         <hr>
         <br>
 
-        <!-- TODO: if statement to include only if button clicked -->
-        <!-- <div><?php include_once 'form.view.php' ?></div> -->
-
         <div><button class="materials">I have materials</button></div>
         <div><button class="length">I need a minimum length</button></div>
-
-        <!-- TODO: if statement to include only when form data received, processed and returned from the server -->
-        <!-- <div><?php include_once 'fence.view.php' ?></div> -->
-
 
     </body>
 </html>

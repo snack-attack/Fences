@@ -33,6 +33,8 @@ $router->get('/length', function() {
 });
 
 $router->post('/length', function() {
+    require_once './views/fence.view.php';
+
     $request = $request->getBody();
     $fence = new Fence();
     
