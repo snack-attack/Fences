@@ -1,6 +1,6 @@
 <section>
     <form method="post"><br>
-        <h3>OPTION 2: The minimum length of fence you require:</h3>
+        <h2>The minimum length of fence you require:</h2>
         Length: <input type="number" name="length" min="0"><br><br>
         <button name="submit">Build me a fence!</button>
     </form>
