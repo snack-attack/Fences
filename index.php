@@ -25,9 +25,9 @@ $router->post('/materials', function($request) {
     
     $posts = $fence->getPosts();
     $railings = $fence->getRailings();
+    $length = $fence->caluclateLength($posts, $railings);
     
-    var_dump($railings);
-    var_dump($posts);
+    var_dump($length);
 });
 
 $router->get('/length', function() {
@@ -42,5 +42,9 @@ $router->post('/length', function($request) {
     
     $fence->setLength($request['length']);
     $length = $fence->getLength();
+    $posts = $fence->calculatePosts($length);
+    $railings = $fence->calculateRailings($length);
+
+    var_dump($posts, $railings);
     
 });

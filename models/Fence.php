@@ -52,7 +52,7 @@ class Fence {
 
 
     //function to calculate fence length in meters given posts + railings
-    public function caluclateLength($posts, $railings) 
+    public function caluclateLength(int $posts, int $railings) 
     {
         //validate the min posts (2) and railings (1) to build the shortest possible fence length
         if(isset($posts) && isset($railings)) {
@@ -84,12 +84,6 @@ class Fence {
 
         echo "Please supply a minimum fence length of 1.7m or greater.";
     }
-
-    public function calculateExcess($posts, $railings, $length)
-    {
-
-    }
-
 }
 
 /*
