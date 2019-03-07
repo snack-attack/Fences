@@ -26,6 +26,7 @@
         <br>
 
         <div><button class="materials">I have materials</button></div>
+        <br>
         <div><button class="length">I need a minimum length</button></div>
 
     </body>

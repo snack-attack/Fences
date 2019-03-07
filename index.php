@@ -15,6 +15,8 @@ $router->get('/materials', function() {
 });
 
 $router->post('/materials', function($request) {
+    require_once './views/fence.view.php';
+
     $request = $request->getBody();
     $fence = new Fence();
     
@@ -32,7 +34,7 @@ $router->get('/length', function() {
     require_once './views/length.view.php';
 });
 
-$router->post('/length', function() {
+$router->post('/length', function($request) {
     require_once './views/fence.view.php';
 
     $request = $request->getBody();
@@ -41,5 +43,4 @@ $router->post('/length', function() {
     $fence->setLength($request['length']);
     $length = $fence->getLength();
     
-    var_dump($length);
 });
