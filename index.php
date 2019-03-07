@@ -23,3 +23,9 @@ $router->post('/index.php', function($request) {
     var_dump($posts);
     var_dump($length);
 });
+
+$router->get('/', function() {
+    return <<<HTML
+    <h1>Hello world</h1>
+HTML;
+});
