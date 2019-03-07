@@ -9,7 +9,7 @@ Returns posts + railings if given length
 TODO =>
 1. Figure out why 4.9 length is giving incorrect railings
 2. write validation for making sure railings are one less than posts & that only ints are provided (not floats)
-3. Write comments
+3. Write docblocks
 */
 
 class Fence {

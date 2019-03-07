@@ -25,8 +25,10 @@
         <hr>
         <br>
 
+        <!-- TODO: if statement to include only if button clicked -->
         <div><?php include_once 'form.view.php' ?></div>
 
+        <!-- TODO: if statement to include only when form data received, processed and returned from the server -->
         <div><?php include_once 'fence.view.php' ?></div>
 
 

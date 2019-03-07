@@ -1,3 +1,4 @@
+
 <h2 style="text-align:center">Final Fence Specifications</h2>
 <table style="width:75%; margin-bottom:8rem">
     <tr>
@@ -7,17 +8,17 @@
     </tr>
     <tr style="margin-bottom:20px">
         <th>Posts</th>
-        <th><?= isset($_POST["posts"]) ?></th>
+        <th><?= isset($posts) ?></th>
         <th><?= $posts ?></th>
     </tr>
     <tr>
         <th>Railings</th>
-        <th><?= isset($_POST["railings"]) ?></th>
+        <th><?= isset($_POST['railings']) ?></th>
         <th><?= $railings ?></th>
     </tr>
     <tr>
         <th>Length</th>
-        <th><?= isset($_POST["length"]) ?></th>
+        <th><?= isset($_POST['length']) ?></th>
         <th><?= $length ?></th>
     </tr>
     <tr>
