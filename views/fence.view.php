@@ -8,17 +8,17 @@
     <tr style="margin-bottom:20px">
         <th>Posts</th>
         <th><?= $_POST['posts']; ?></th>
-        <th><?= $posts ?></th>
+        <th><?= $data["posts"]; ?></th>
     </tr>
     <tr>
         <th>Railings</th>
         <th><?= $_POST['railings']; ?></th>
-        <th><?= $railings ?></th>
+        <th><?= $data["railings"]; ?></th>
     </tr>
     <tr>
         <th>Length</th>
         <th><?= $_POST['length']; ?></th>
-        <th><?= $length ?></th>
+        <th><?= $data["length"]; ?></th>
     </tr>
     <tr>
         <th>Units</th>

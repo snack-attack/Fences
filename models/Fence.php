@@ -50,9 +50,8 @@ class Fence {
         return $this->length;
     }
 
-
     //function to calculate fence length in meters given posts + railings
-    public function caluclateLength(int $posts, int $railings) 
+    public function caluclateLength($posts, $railings) 
     {
         //validate the min posts (2) and railings (1) to build the shortest possible fence length
         if(isset($posts) && isset($railings)) {

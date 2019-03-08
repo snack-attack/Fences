@@ -4,7 +4,12 @@ require_once './http/Request.php';
 require_once './http/Router.php';
 require_once './models/Fence.php';
 
+function render($file, array $data) {
+    require_once "./views/" . $file . ".view.php";
+}
+
 $router = new Router(new Request);
+$fence = new Fence();
 
 $router->get('/', function() {
     require_once './views/index.view.php';
@@ -15,8 +20,6 @@ $router->get('/materials', function() {
 });
 
 $router->post('/materials', function($request) {
-    require_once './views/fence.view.php';
-
     $request = $request->getBody();
     $fence = new Fence();
     
@@ -25,9 +28,15 @@ $router->post('/materials', function($request) {
     
     $posts = $fence->getPosts();
     $railings = $fence->getRailings();
+
     $length = $fence->caluclateLength($posts, $railings);
+    $finalPosts = $fence->calculatePosts($length);
+    $finalRailings = $fence->calculateRailings($length);
+
+    $data = ["length" => $length, "posts" => $finalPosts, "railings" => $finalRailings];
     
-    var_dump($length);
+    return render('fence', $data);
+    
 });
 
 $router->get('/length', function() {
@@ -35,8 +44,6 @@ $router->get('/length', function() {
 });
 
 $router->post('/length', function($request) {
-    require_once './views/fence.view.php';
-
     $request = $request->getBody();
     $fence = new Fence();
     
@@ -44,7 +51,10 @@ $router->post('/length', function($request) {
     $length = $fence->getLength();
     $posts = $fence->calculatePosts($length);
     $railings = $fence->calculateRailings($length);
+    $finalLength = $fence->caluclateLength($posts, $railings);
 
-    var_dump($posts, $railings);
+    $data = ["length" => $finalLength, "posts" => $posts, "railings" => $railings];
+    
+    return render('fence', $data);
     
 });
