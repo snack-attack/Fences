@@ -25,9 +25,9 @@
         <hr>
         <br>
 
-        <div><a href="views/materials.view.php">I have materials</a></div>
+        <div><a href="/materials">I have materials</a></div>
         <br>
-        <div><a href="views/length.view.php">I need a minimum length</a></div>
+        <div><a href="/length">I need a minimum length</a></div>
 
     </body>
 </html>
