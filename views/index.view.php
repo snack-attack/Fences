@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="">
         <style>
             body {
-                margin: 40px;
+                margin: 80px;
             }
         </style>
     </head>
@@ -25,9 +25,9 @@
         <hr>
         <br>
 
-        <div><button class="materials">I have materials</button></div>
+        <div><a href="views/materials.view.php">I have materials</a></div>
         <br>
-        <div><button class="length">I need a minimum length</button></div>
+        <div><a href="views/length.view.php">I need a minimum length</a></div>
 
     </body>
 </html>
