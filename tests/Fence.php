@@ -1,29 +1,41 @@
 <?php
 
-require_once '../models/Fence.php';
-
 use PHPUnit\Framework\TestCase;
 
-class TestFence extends TestCase 
+require('../models/Fence.php');
+
+class TestFenceBuilder extends TestCase 
 {
     const RAILING_LENGTH = 1.5;
     const POST_LENGTH = 0.1;
     const MIN_LENGTH = 1.7;
 
-    private $posts, $railings, $length;
+    public function testCalculateLength() 
+    {
+        $fence = new FenceBuilder();
 
-    public function testCalculateLength($posts, $railings) {
-        $fence = new Fence;
+        $length = $fence->caluclateLength(3, 2);
 
-        $fence->setPosts(3);
-        $fence->setRailings(2);
-        
-        $posts = $fence->getPosts();
-        $railings = $fence->getRailings();
+        $this->assertEquals(3.3, $length);
+    }
 
-        $length = $fence->caluclateLength($posts, $railings);
+    public function testCalculatePosts() 
+    {
+        $fence = new FenceBuilder();
 
-        return $length;
+        $posts = $fence->calculatePosts(3.3);
+
+        $this->assertEquals(3, $posts);
+    }
+
+    public function testCalculateRailings()
+    {
+        $fence = new FenceBuilder();
+
+        $railings = $fence->calculateRailings(3.3);
+
+        $this->assertEquals(2, $railings);
+
     }
 
 }

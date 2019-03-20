@@ -12,7 +12,7 @@ TODO =>
 3. Write docblocks
 */
 
-class Fence 
+class FenceBuilder 
 {
     //lengths given in centimeters
     const RAILING_LENGTH = 1.5;
@@ -81,8 +81,6 @@ class Fence
             $railings = ceil(($length - static::POST_LENGTH) / 1.6);
             return $railings;
         }
-
-        echo "Please supply a minimum fence length of 1.7m or greater.";
     }
 }
 

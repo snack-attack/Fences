@@ -9,7 +9,7 @@ function render($file, array $data) {
 }
 
 $router = new Router(new Request);
-$fence = new Fence();
+$fence = new FenceBuilder();
 
 $router->get('/', function() {
     require_once './views/index.view.php';
@@ -21,7 +21,7 @@ $router->get('/materials', function() {
 
 $router->post('/materials', function($request) {
     $request = $request->getBody();
-    $fence = new Fence();
+    $fence = new FenceBuilder();
     
     $fence->setPosts($request['posts']);
     $fence->setRailings($request['railings']);
@@ -45,7 +45,7 @@ $router->get('/length', function() {
 
 $router->post('/length', function($request) {
     $request = $request->getBody();
-    $fence = new Fence();
+    $fence = new FenceBuilder();
     
     $fence->setLength($request['length']);
     $length = $fence->getLength();
