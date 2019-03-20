@@ -12,7 +12,8 @@ TODO =>
 3. Write docblocks
 */
 
-class Fence {
+class Fence 
+{
     //lengths given in centimeters
     const RAILING_LENGTH = 1.5;
     const POST_LENGTH = 0.1;
@@ -54,7 +55,7 @@ class Fence {
     public function caluclateLength($posts, $railings) 
     {
         //validate the min posts (2) and railings (1) to build the shortest possible fence length
-        if(isset($posts) && isset($railings)) {
+        if (isset($posts) && isset($railings)) {
             $postLength = $posts * static::POST_LENGTH;
             $railLength = $railings * static::RAILING_LENGTH; 
             $length = $postLength + $railLength;
@@ -66,7 +67,7 @@ class Fence {
 
     public function calculatePosts($length) 
     {
-        if(isset($length) && $length >= static::MIN_LENGTH) {
+        if (isset($length) && $length >= static::MIN_LENGTH) {
             $posts = ceil(($length - static::POST_LENGTH) / 1.6 + 1);
             return $posts; 
         }
@@ -76,7 +77,7 @@ class Fence {
 
     public function calculateRailings($length) 
     {
-        if(isset($length) && $length >= static::MIN_LENGTH) { 
+        if (isset($length) && $length >= static::MIN_LENGTH) { 
             $railings = ceil(($length - static::POST_LENGTH) / 1.6);
             return $railings;
         }

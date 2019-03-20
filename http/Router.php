@@ -1,5 +1,6 @@
 <?php
-class Router {
+class Router 
+{
     private $request;
 
     private $supportedHttpMethods = array(
@@ -14,7 +15,7 @@ class Router {
     function __call($name, $args) {
         list($route, $method) = $args;
 
-        if(!in_array(strtoupper($name), $this->supportedHttpMethods)) {
+        if (!in_array(strtoupper($name), $this->supportedHttpMethods)) {
             $this->invalidMethodHandler();
         } 
         

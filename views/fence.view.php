@@ -26,3 +26,5 @@
         <th>Meters</th>
     </tr>
 </table>
+
+<a href="/">Build another fence!</a>
