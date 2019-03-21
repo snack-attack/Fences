@@ -35,7 +35,5 @@ class TestFenceBuilder extends TestCase
         $railings = $fence->calculateRailings(3.3);
 
         $this->assertEquals(2, $railings);
-
     }
-
 }
