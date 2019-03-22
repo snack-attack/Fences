@@ -1,17 +1,5 @@
 <?php
 
-/*
-Description & Constraints =>
-A class that will accept user input for three parameters: posts + railings OR length
-Returns length if given posts + railings
-Returns posts + railings if given length
-
-TODO =>
-1. Figure out why 4.9 length is giving incorrect railings
-2. write validation for making sure railings are one less than posts & that only ints are provided (not floats)
-3. Write docblocks
-*/
-
 class FenceBuilder 
 {
     //lengths given in centimeters
@@ -83,33 +71,3 @@ class FenceBuilder
         }
     }
 }
-
-/*
-Test for supplying length and returning the correct number of posts + railings.
-*/
-
-// $myFence = new Fence;
-// $myFence->setLength(3);
-// $length = $myFence->getLength();
-// $posts = $myFence->calculatePosts($length);
-// $railings = $myFence->calculateRailings($length);
-
-// echo "A minimum fence length of {$length}m requires:\n";
-// echo $posts, " posts\n";
-// echo $railings, " railings\n";
-
-
-/* 
-Test for supplying posts + railings and returning the correct length.
-*/
-
-// $myFence = new Fence;
-// $myFence->setPosts(3);
-// $myFence->setRailings(2);
-// $posts = $myFence->getPosts();
-// $railings = $myFence->getRailings();
-// $length = $myFence->caluclateLength($posts, $railings);
-
-// echo $posts, "\n";
-// echo $railings, "\n";
-// echo $length, "\n";
