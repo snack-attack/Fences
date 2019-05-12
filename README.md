@@ -2,6 +2,6 @@
 
 A simple application that can calculate the amount of posts and railings required to build a fence of a certain length or that will calculate the length of a fence when you provide the amount of posts and railings.
 
-Built with HTML & PHP.
+In addition to the basic challenge spec, I build a custom router for the application in order to learn how routing is done by common MVC frameworks.
 
-Visit XXX to see the app in action.
+Built with HTML & PHP according to object-oriented design principles.
